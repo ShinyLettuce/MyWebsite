@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0 width=device-width" />
+<title>Jacob Engelhardt</title>
+    <link rel="stylesheet" href="../../styles.css?version=4">
+    <link rel="icon" type="image/x-icon" href="../../images/cubecube.png">
+</head>
+
+<body>
+    <header>
+        <div class = "Top">
+            <h1><a href="../index.html">Jacob Engelhardt</a></h1>
+        </div>
+        <div class = "Top">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Portfolio</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../../documents/CV_Jacob_Engelhardt.pdf?version=2" target="_blank">CV</a></li>
+                    <li><a href="https://www.linkedin.com/in/jacob-engelhardt-681a51248/" target="_blank"><img src="../../images/linkedin-icon.png" alt=""></a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+    <section class = "project">
+        <div class ="projectpage">
+            <img class="banner" src="../../images/AStar.png" alt="">
+            <h2>A* Pathfinding</h2>
+            <p>
+                One of my assignments had me create an implementation of the A* algorithm in C++.
+                The requirements were that it should be visually represented and easy to edit the
+                scenario. The simulation represents an astronaut(gray) that needs to find and pick up a
+                star(yellow), carry it to and sell it at a trading post(red), and finally return to their
+                ship(purple). While carrying the star, the astronaut's stamina depletes and if it reaches zero
+                they need to drop the star to go and rest in their spaceship before they can continue.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OxZe14ATuXg?si=cw0zK0pbfePDXgky" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>
+                The biggest challenge with this project was researching and implementing A* itself. I was mainly
+                basing my A* implementation on a Unity project with the algorithm implemented from the online educator Code Monkey.
+                Reading and breaking down how the C# scripts worked to then try and implement them in C++ required me to truly
+                familiarize myself with the algorithm while it also practiced my ability to read and understand someone elses code.
+                Another challenge was controlling the flow of the simulation. The astronaut was controlled with a simple FSM
+                to execute the proper behavior of when to walk where. Due to it being possible to edit the start conditions
+                of the simulation, some edge cases had to be taken care of such as the astronaut spawning with the star on the
+                trading post, or simply when there is no valid path.
+            </p>
+            <img class="content" src="../../images/AStarving.png" alt="">
+            <p>
+                <i>A*-vation is common in a cut-throat business</i>
+            </p>
+        </div>
+    </section>
+    <footer>
+        <p>
+            <b>CONTACT ME</b>
+            <h1>Let's get in touch!</h1>
+        </p>
+
+        <div class="contact">
+            <div class="contact-widget">
+                <img src="../../images/mailicon.png" alt="Mail">
+                <p>
+                    <b>je03@live.se</b>
+                </p>
+            </div>
+            <div class="contact-widget">
+                <img src="../../images/phoneicon.png" alt="Phone">
+                <p>
+                    <b>+46-72 272 56 61</b>
+                </p>
+            </div>
+            <div class="contact-widget">
+                <a href="https://www.linkedin.com/in/jacob-engelhardt-681a51248/" target="_blank">
+                    <img src="../../images/linkedin-icon-white.png" alt="Linkedin">
+                </a>
+                <p>
+                    <a href="https://www.linkedin.com/in/jacob-engelhardt-681a51248/" target="_blank">
+                        <b>My Linkedin</b>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>                              

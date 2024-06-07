@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0 width=device-width" />
+<title>Jacob Engelhardt</title>
+    <link rel="stylesheet" href="../../styles.css?version=4">
+    <link rel="icon" type="image/x-icon" href="../../images/cubecube.png">
+</head>
+
+<body>
+    <header>
+        <div class = "Top">
+            <h1><a href="../index.html">Jacob Engelhardt</a></h1>
+        </div>
+        <div class = "Top">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Portfolio</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../../documents/CV_Jacob_Engelhardt.pdf?version=2" target="_blank">CV</a></li>
+                    <li><a href="https://www.linkedin.com/in/jacob-engelhardt-681a51248/" target="_blank"><img src="../../images/linkedin-icon.png" alt=""></a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+    <section class = "project">
+        <div class ="projectpage">
+            <img class="banner" src="../../images/cube.png" alt="">
+            <h2>Shadertoy Rasterizer</h2>
+            <p>
+                A cube rendered in real time with shader code written on the website shadertoy.
+                This project was created when I was studying real time graphics and the rendering
+                pipeline. In order to better grasp the concepts involved when turning three dimensional
+                vertex data into visible pixels on screen I decided to create a simplified version
+                of the process using shadertoy. Projects on the website are written in glsl along with
+                some additional functions provided by shadertoy. The cube was rendered by taking a set
+                of verticies and transforming them into clip space, projecting these onto the screen,
+                and rasterizing the triangles to form the cube.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nNDEHvtyZsI?si=Cu5VKqv8X0-NkTVt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <p>
+                For this project I had to research the different steps that goes into rendering
+                something on screen more in depth. I read about and applied the math required to
+                render 3D vertecies onto a 2D plane with perspective projection as well as how to
+                detect when a pixel is inside a triangle. The set of vertecies had corresponding
+                normals due to me wanting to implement a lighting model as well, however I did not
+                have the time for it. The biggest challenge, which came right before the cube was
+                finished, was an issue where it would not render properly because I was using the
+                wrong function for triangle rasterization. It was difficult to tell if the problem
+                was due to a fault in the projection, rasterization, or if I had simply misunderstood
+                the pipeline, but after several more reviews of litterature and cross comparing with
+                similar projects I managed to find out the issue.
+            </p>
+            <p>
+                After this project I felt more familiar with the real time graphics pipeline and I
+                had also gotten some experience writing shader code using glsl. In the future I might
+                go back and add lighting to further experiment with vertex normals.
+            </p>
+        </div>
+    </section>
+    <footer>
+        <p>
+            <b>CONTACT ME</b>
+            <h1>Let's get in touch!</h1>
+        </p>
+
+        <div class="contact">
+            <div class="contact-widget">
+                <img src="../../images/mailicon.png" alt="Mail">
+                <p>
+                    <b>je03@live.se</b>
+                </p>
+            </div>
+            <div class="contact-widget">
+                <img src="../../images/phoneicon.png" alt="Phone">
+                <p>
+                    <b>+46-72 272 56 61</b>
+                </p>
+            </div>
+            <div class="contact-widget">
+                <a href="https://www.linkedin.com/in/jacob-engelhardt-681a51248/" target="_blank">
+                    <img src="../../images/linkedin-icon-white.png" alt="Linkedin">
+                </a>
+                <p>
+                    <a href="https://www.linkedin.com/in/jacob-engelhardt-681a51248/" target="_blank">
+                        <b>My Linkedin</b>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>                              
