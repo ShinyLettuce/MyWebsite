@@ -223,7 +223,7 @@ div.projectpage img.content{
 }
 @media screen and (max-width: 500px){
     div.projectpage p{
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 @media screen and (min-width: 1170px ){
@@ -303,8 +303,8 @@ div.about img{
     }
 }
 @media screen and (max-width: 500px){
-    div.projectpage p{
-        font-size: 16px;
+    div.about p{
+        font-size: 18px;
     }
 }
 @media screen and (min-width: 1170px ){
