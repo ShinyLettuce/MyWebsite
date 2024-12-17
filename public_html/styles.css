@@ -223,9 +223,7 @@ div.projectpage img.content{
 }
 @media screen and (max-width: 500px){
     div.projectpage p{
-        width: 80vW;
         font-size: 16px;
-        line-height: 26px;
     }
 }
 @media screen and (min-width: 1170px ){
@@ -306,9 +304,7 @@ div.about img{
 }
 @media screen and (max-width: 500px){
     div.projectpage p{
-        width: 80vW;
         font-size: 16px;
-        line-height: 26px;
     }
 }
 @media screen and (min-width: 1170px ){
