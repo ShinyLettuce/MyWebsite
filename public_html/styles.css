@@ -85,6 +85,15 @@ div.introduction{
         border-radius: 20px;
     }
 }
+@media screen and (max-width: 1400px ){
+    div.introduction.img{
+        margin: auto;
+    }
+    div.introText{
+        text-align: center;
+        margin: auto
+    }
+}
 div.introText{
     margin-top: auto;
     margin-left: 0px;
