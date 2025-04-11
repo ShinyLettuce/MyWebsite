@@ -61,6 +61,12 @@ section{
     width: 60vw;
     background: rgb(255, 255, 255);
     height: auto;
+
+    li{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 24px;
+        line-height: 38px;
+    }
 }
 
 div.introduction{
@@ -231,6 +237,14 @@ section.project{
         color: rgb(0, 0, 0);
     }
 
+    h3{
+        color: rgb(0, 0, 0);
+    }
+
+    a{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
     div.projectpage{
         p{
             margin-top: 10px;
@@ -253,7 +267,8 @@ section.project{
 }
 
 @media screen and (max-width: 1100px ) {
-    div.projectpage{
+    section.project > div.projectpage{
+
         img.banner{
             width: 70vW;
             height: 47vw;
@@ -279,40 +294,48 @@ section.project{
     section.project{
         padding-left: 0px;
         padding-right: 0px;
+
+        div.projectpage{
+            margin: 10vw;
+            
+            img.banner{
+                width: 80vW;
+                height: 53vw;
+            }
+        
+            img.content{
+                width: 70vW;
+                height: auto;
+            }
+    
+            p{
+                width: 80vW;
+                font-size: 20px;
+                line-height: 28px;
+            }
+    
+            iframe{
+                width: 70vW;
+                height: 40vw;
+            }
+        }
     }
-
-    div.projectpage{
-        margin: 10vw;
-
-        p{
-            width: 80vW;
-            font-size: 20px;
-            line-height: 28px;
-        }
-
-        img.banner{
-            width: 80vW;
-            height: 53vw;
-        }
-
-        img.content{
-            width: 70vW;
-            height: auto;
-        }
-
-        iframe{
-            width: 70vW;
-            height: 40vw;
-        }
+    section li{
+        width: 80vW;
+        font-size: 20px;
+        line-height: 28px;
     }
 }
 @media screen and (max-width: 500px){
-    div.projectpage p{
+    section.project div.projectpage p{
+        font-size: 18px;
+    }
+    section li{
         font-size: 18px;
     }
 }
 @media screen and (min-width: 1170px ){
-    div.projectpage{
+    section.project div.projectpage{
         margin: auto;
         
         p{
@@ -357,15 +380,15 @@ section.bio{
 
 
 @media screen and (max-width: 1100px ){
-    div.about img{
+    section.bio div.about img{
         width: 40vW;
         height: auto;
     }
-    div.about p{
+    section.bio div.about p{
         width: 70vW;
         height: auto;
     }
-    div.about iframe{
+    section.bio div.about iframe{
         width: 60vW;
         height: 35vw;
     }
@@ -375,32 +398,32 @@ section.bio{
         padding-left: 0px;
         padding-right: 0px;
     }
-    div.about{
+    section.bio div.about{
         margin: 10vw;
     }
-    div.about p{
+    section.bio div.about p{
         width: 80vW;
         font-size: 20px;
         line-height: 26px;
     }
-    div.about img{
+    section.bio div.about img{
         width: 40vW;
     }
-    div.about iframe{
+    section.bio div.about iframe{
         width: 70vW;
         height: 40vw;
     }
 }
 @media screen and (max-width: 500px){
-    div.about p{
+    section.bio div.about p{
         font-size: 18px;
     }
 }
 @media screen and (min-width: 1170px ){
-    div.about{
+    section.bio div.about{
         margin: auto;
     }
-    div.about p{
+    section.bio div.about p{
         width: 700px;
         font-size: 26px;
 
