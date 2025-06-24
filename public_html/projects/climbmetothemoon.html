@@ -32,13 +32,44 @@
                 <a href="https://store.steampowered.com/app/3021780/Odins_Defense/" target="_blank">> Click here to visit the game's Itch.io page</a>
             </p>
             <p>
-                Introduction
-            </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/sKttSTVoD-w?si=xYWy06YOmRYf1CEg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            <p>
-                Main body of text
+                In Climb Me to the Moon one player takes the role of an astronaut trying to climb to
+                the moon. Helping them are floating stars who can push objects and block projectiles to
+                help the astronaut advance. 
             </p>
             <p>
-                Main body of text
+                The game was originally made for a course about rapid prototyping with the prompts
+                6 player or more multiplayer, and 2 bit color. Development started during a Valentine's 
+                game jam which added the additional theme "To the moon and back". The jam took place over
+                a weekend and, by the end, the first prototype of Climb Me to the Moon won the awards for
+                most fun and best interpretation.
+            </p>
+            <p>
+                The game was then further developed and displayed at
+                Gotland Game Conference 2025 where it recieved the Jury Spotlight award, as well as
+                nominations for the Public Choice, Best Level Design, and Best Art Direction awards.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/sKttSTVoD-w?si=xYWy06YOmRYf1CEg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>
+                During its initial development, the biggest challenge was learning the Godot game engine
+                and its scripting language GDScript while working to complete the game in the span of 48 hours.
+                Luckily, in my team of three, one of us had previous experience with the engine and I could ask
+                them if I got stuck or confused. During the development for the main course, we worked on the characters
+                as well as the separate platformer components we would use to build levels. This made it easy to split up
+                work. I created the projectile firing cannons, pair programmed with my teammate to fix issues with
+                the camera and physics, took part in designing levels and tested controller communication with Godot.
+            </p>
+            <!--IMAGE HERE, MAYBE EVEN GIF?-->
+            <p>
+                As we continued with the game to display it at Gotland Game conference many things were polished. Much
+                of my work focused on the astronaut character. I restructured the astronaut controlling script into an
+                enum state machine to make it easier to work with. The improved stucture the character script
+                allowed me to implement a falling and landing animation. I implemented jump buffering and coyote time to
+                improve the platforming game feel. I also implemented the death animation of the astronaut and used
+                Godot's built in event signals at the end of the animation to trigger the scene to reload.
+            </p>
+            <p>
+                Another thing I implemented was the player selection screen for determining how many player characters
+                would be active during the game, as well as the logic for deactivating inactive players.
             </p>
             <img class="content" src="../../images/CMTTM2.png" alt="">
             <p>
