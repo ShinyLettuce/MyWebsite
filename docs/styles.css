@@ -245,6 +245,27 @@ section.project{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
+    button {
+        width: 300px;
+        height: 50px;
+
+        font-size: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+
+        border: 2px solid rgb(34, 34, 34);
+        border-radius: 3px;
+
+        background-color:rgb(241, 241, 241);
+        box-shadow: 3px 3px 3px 0 rgba(150, 150, 150);
+        cursor: pointer;
+        transition-duration: 0.18s;
+    }
+
+    button:hover{
+        background-color:rgb(204, 204, 204);
+    }
+
     div.projectpage{
         p{
             margin-top: 10px;
