@@ -163,6 +163,7 @@ div.showcase{
         width: 300px;
         height: 200px;
         border-radius: 3px;
+        transition-duration: 0.18s;
     }
 
     h3{
@@ -189,6 +190,14 @@ div.showcase{
         color: rgb(22, 22, 22);
     }
 }
+
+div.showcase:hover{
+    img{
+        width: 315px;
+        height: 210px;
+    }
+}
+
 
 @media screen and (max-width: 1180px ){
     section{
@@ -220,6 +229,11 @@ div.showcase{
 @media screen and (max-width: 400px){
     div.showcase img{
         width: 75vw;
+        height: auto;
+    }
+
+    div.showcase img:hover{
+        width: 80vw;
         height: auto;
     }
 }
@@ -385,7 +399,7 @@ section.bio{
     align-items: center;
     padding-left: 60px;
     padding-right: 60px;
-    color: rgb(65, 65, 65);
+    color: rgb(29, 29, 29);
 
     h2{
         color: rgb(0, 0, 0);
@@ -395,17 +409,19 @@ section.bio{
         display: flex;
         align-items: center;
         flex-direction: column;
+        margin: auto;
     
         p{
             margin-top: 10px;
-            font-family: 'Times New Roman';
-            font-size: 24px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             line-height: 38px;
+            width: 700px;
+            font-size: 20px;
         }
     
         img{
-            height: 440px;
-            width: 440px;
+            height: 330px;
+            width: 330px;
             border-radius: 20%;
             padding-bottom: 30px
         }
@@ -415,7 +431,7 @@ section.bio{
 
 @media screen and (max-width: 1100px ){
     section.bio div.about img{
-        width: 40vW;
+        width: 30vW;
         height: auto;
     }
     section.bio div.about p{
@@ -451,16 +467,6 @@ section.bio{
 @media screen and (max-width: 500px){
     section.bio div.about p{
         font-size: 18px;
-    }
-}
-@media screen and (min-width: 1170px ){
-    section.bio div.about{
-        margin: auto;
-    }
-    section.bio div.about p{
-        width: 700px;
-        font-size: 26px;
-
     }
 }
 
