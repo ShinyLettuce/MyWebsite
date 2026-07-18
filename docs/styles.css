@@ -173,9 +173,10 @@ div.showcase{
 
     p{
         margin-top: 10px;
+        margin-bottom: 12px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 19px;
-        line-height: 32px;
+        line-height: 30px;
     }
 
     p.date{
