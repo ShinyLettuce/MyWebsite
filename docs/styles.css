@@ -71,8 +71,8 @@ section{
 div.introduction{
     display: flex;
 
-    padding-bottom: 60px;
-    padding-top: 60px;
+    padding-bottom: 30px;
+    padding-top: 30px;
 
     margin-left: 30px;
     margin-right: 30px;
@@ -80,10 +80,11 @@ div.introduction{
     border-top: 3px solid rgb(235, 235, 235);
 
     img{
-        width: 300px;
+        width: 170px;
         height: auto;
         margin-top: auto;
-        margin-left: auto;
+        margin-bottom: auto;
+        margin-left: 20px;
         margin-right: 75px;
         border-radius: 150px;
     }
@@ -92,10 +93,17 @@ div.introduction{
 div.introText{
     margin-top: auto;
     margin-left: 0px;
-    width: 500px;
+    width: 700px;
+
+    h2{
+        font-size: 52px;
+        margin-bottom: 20px;
+        margin-top: auto;
+    }
 
     p{
-        font-size: 18px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 22px;
     }
 }
 
@@ -110,6 +118,7 @@ div.introText{
     div.introText{
         text-align: center;
         margin: auto;
+        width: 80%;
     }
 }
 @media screen and (max-width: 850px ){
@@ -121,16 +130,24 @@ div.introText{
 @media screen and (max-width: 700px ){
     div.introduction{
         img{
-            width: 45vw;
+            width: 35vw;
         }
-        padding-bottom: 7vw;
-        padding-top: 10vw;
+        padding-bottom: 5vw;
+        padding-top: 5vw;
     }
     div.introText{
         width: 75vw;
+
         h2{
-            margin-top: 4vw;
-            margin-bottom: 4vw;
+            margin-top: 2vw;
+            margin-bottom: 2vw;
+            font-size: 36px;
+        }
+
+        p{
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+            font-size: 18px;
         }
     }
 }
@@ -147,8 +164,13 @@ div.title{
 div.showcaselist{
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items:flex-start;
     column-gap: 20px;
+
+    a{
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 div.showcase{
@@ -191,6 +213,27 @@ div.showcase{
         text-decoration: none;
         color: rgb(22, 22, 22);
     }
+
+    div.showcasetaglist{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        column-gap: 3px;
+        row-gap: 3px;
+    }
+    
+    div.showcasetag{
+        margin: 0px;
+        padding: 4px;
+        background-color: #ffffff;
+        border: 3px solid rgb(230, 230, 230);
+        border-radius: 4px;
+        box-shadow: 3px 3px 3px 0 rgb(206, 206, 206);
+    
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 17px;
+        color: rgb(54, 54, 54);
+    }
 }
 
 div.showcase:hover{
@@ -201,28 +244,13 @@ div.showcase:hover{
         width: 315px;
         height: 210px;
     }
+
+    div.showcasetag{
+        border: 3px solid rgb(253, 180, 180);
+        box-shadow: 3px 3px 3px 0 rgb(226, 206, 206);
+    }
 }
 
-div.showcasetaglist{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    column-gap: 3px;
-    row-gap: 3px;
-}
-
-div.showcasetag{
-    margin: 0px;
-    padding: 4px;
-    background-color: #ffffff;
-    border: 3px solid rgb(230, 230, 230);
-    border-radius: 4px;
-    box-shadow: 3px 3px 3px 0 rgb(206, 206, 206);
-
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 17px;
-    color: rgb(54, 54, 54);
-}
 
 
 @media screen and (max-width: 1180px ){
