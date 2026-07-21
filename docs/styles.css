@@ -5,6 +5,27 @@ body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+ /* body.bonytony
+{
+    background: rgb(228, 126, 126);
+    background-image: url('./images/BonyTonyBanner.png');
+}
+
+body.odinsdefense
+{
+    background: rgb(173, 197, 224);
+}
+
+body.climbmetothemoon
+{
+    background: rgb(6, 20, 34);
+}
+
+body.rasterizer
+{
+    background: rgb(241, 199, 185);
+}  */
+
 header{
     padding: 40px;
     padding-bottom: 10px;
@@ -599,7 +620,7 @@ section.bio{
 }
 
 footer{
-    background: rgb(24, 24, 24);
+    background: rgb(24, 23, 23);
     color: white;
     padding: 20px;
 
