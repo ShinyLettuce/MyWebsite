@@ -204,6 +204,14 @@ div.showcase{
         transition-duration: 0.15s;
     }
 
+    img.moving{
+        display:none;
+    }
+
+    img.static{
+        display:block;
+    }
+
     h3{
         font-size: 36px;
     }
@@ -258,6 +266,14 @@ div.showcase:hover{
     img{
         width: 315px;
         height: 210px;
+    }
+
+    img.moving{
+        display:block;
+    }
+
+    img.static{
+        display:none;
     }
 
     div.showcasetag{
