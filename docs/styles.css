@@ -60,12 +60,6 @@ section{
     width: 60vw;
     background: rgb(255, 255, 255);
     height: auto;
-
-    li{
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 24px;
-        line-height: 38px;
-    }
 }
 
 div.introduction{
@@ -251,8 +245,6 @@ div.showcase:hover{
     }
 }
 
-
-
 @media screen and (max-width: 1180px ){
     section{
         width: 70vw;
@@ -302,59 +294,102 @@ section.project{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding-left: 60px;
-    padding-right: 60px;
+    width: calc(60vw + 120px);
     color: rgb(29, 29, 29);
 
-    h2{
-        color: rgb(0, 0, 0);
+    div.light{ /* might not be needed, at least not used at the moment */
+        width:inherit;
+    
+        color: rgb(29, 29, 29);
+        background-color: rgb(255, 255, 255);
     }
+    
+    div.dark{
+        width:inherit;
 
-    h3{
-        color: rgb(0, 0, 0);
+        h3{
+            color: rgb(243, 243, 243);
+            border-color: rgb(243, 243, 243);
+        }
+
+        color: rgb(243, 243, 243);
+        background-color: rgb(46, 41, 44);
     }
-
-    a{
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    button {
-        width: 300px;
-        height: 50px;
-
-        font-size: 20px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-align: center;
-
-        border: 2px solid rgb(34, 34, 34);
-        border-radius: 3px;
-
-        background-color:rgb(241, 241, 241);
-        box-shadow: 3px 3px 3px 0 rgba(150, 150, 150);
-        cursor: pointer;
-        transition-duration: 0.18s;
-    }
-
-    button:hover{
-        background-color:rgb(204, 204, 204);
-    }
-
+    
     div.projectpage{
+        width: inherit;
+
+        a{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        li{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            line-height: 38px;
+
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+        button {
+            width: 300px;
+            height: 50px;
+            
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            
+            border: 2px solid rgb(34, 34, 34);
+            border-radius: 3px;
+            
+            background-color:rgb(241, 241, 241);
+            box-shadow: 3px 3px 3px 0 rgba(150, 150, 150);
+            cursor: pointer;
+            transition-duration: 0.18s;
+        }
+    
+        button:hover{
+            background-color:rgb(204, 204, 204);
+        }
+
+        h2{
+            color: rgb(0, 0, 0);
+            width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h3{
+            font-size: 32px;
+            width: 590px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            border-bottom: 5px double;
+            padding-bottom: 5px;
+        }
+        
         p{
             width: 650px;
             margin-top: 12px;
+            margin-bottom: 25px;
             margin-left: auto;
             margin-right: auto;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 18px;
-            line-height: 32px;
+            line-height: 28px;
         }
-    
+        
         img.banner{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
             height: 456px;
             width: 684px;
         }
-    
+        
         img.content{
             display: block;
             margin-top: 30px;
@@ -364,7 +399,7 @@ section.project{
             width: 560px;
             height: auto;
         }
-
+        
         iframe{
             display: block;
             margin-left: auto;
@@ -372,13 +407,52 @@ section.project{
             margin-top: 30px;
             margin-bottom: 30px;
         }
-    }
 
+        div.projectOverview{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 650px;
+
+            div.overviewList{
+                width: 300px;
+                margin-bottom: 0px;
+                margin-top: 0px;
+
+                h4{
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                    border-bottom: 3px solid;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    text-align: center;
+                }
+
+                li.info{
+                    p{
+                        margin-bottom: 12px;
+                        margin-top: 12px;
+                    }
+                }
+
+                li.content{
+                    p{
+                        font-size: 24px;
+                        margin-bottom: 12px;
+                        margin-top: 12px;
+                    }
+                }
+            }
+        }
+        
+    }
 }
 
 @media screen and (max-width: 1100px ) {
     section.project > div.projectpage{
-
+        
         margin: auto;
 
         img.banner{
@@ -525,7 +599,7 @@ section.bio{
 }
 
 footer{
-    background: rgb(32, 32, 32);
+    background: rgb(24, 24, 24);
     color: white;
     padding: 20px;
 
