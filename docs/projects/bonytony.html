@@ -56,7 +56,7 @@
                             <li class = "info"><p><b>Duration:</b> 10 weeks</p></li>
                     </div>
                     <div class = "overviewList">
-                        <h4>Work</h4>
+                        <h4>My Work</h4>
                         <li class = "content"><p> { Physics }</p></li>
                         <li class = "content"><p> { Polish }</p></li>
                     </div>
@@ -68,14 +68,25 @@
                     <h3> Physics </h3>
                     <img class="content" src="../images/BonyTonyShotgunJumps.gif" alt="">
                     <p>
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                        The physics for this game had to be made from scratch since our engine
+                        had no system or library in place. This meant deciding what type of collision
+                        shapes we wanted to support and making sure we got necessary data back when
+                        objects collided.
+                    </p>
+                    <p>
+                        Designing this meant deciding on some constraints to make the implementation
+                        as simple as it needed to be. Since all gameplay would happen on a singular
+                        2D plane, this meant all physics could be checked in 2D as well. Another early
+                        decision I made was that the game would only support collisions using axis
+                        aligned bounding boxes or rays.
                     </p>
                     <img class="content" src="../images/AABBSweepTest.gif" alt="">
                     <p>
-                        Liet mer bla bla bla bla bla
+                        I needed information from collisions such as the normal and point of collision.
+                        As such I felt the best check to use for the player was a swept AABB collision.
+                        This was done by treating the collision as a ray vs aabb check, using the Minkowski
+                        sum of both boxes. A separate test project was made where I could test and verify the
+                        math before it was implemented in the game.
                     </p>
                 </div>
             </div>
