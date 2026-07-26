@@ -220,11 +220,16 @@ div.showcase{
         font-size: 36px;
     }
 
+    h4{
+        font-size: 23px;
+        margin: 0;
+    }
+
     p{
-        margin-top: 10px;
-        margin-bottom: 12px;
+        margin-top: 0px;
+        margin-bottom: 17px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 19px;
+        font-size: 18px;
         line-height: 30px;
     }
 
@@ -233,7 +238,7 @@ div.showcase{
         margin-top: 0px;
         margin-bottom:30px;
         line-height: 5px;
-        font-size: 19px;
+        font-size: 18px;
     }
 
     a{
@@ -242,6 +247,7 @@ div.showcase{
     }
 
     div.showcasetaglist{
+        margin-top: 8px;
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
