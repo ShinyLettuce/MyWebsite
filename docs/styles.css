@@ -1,7 +1,11 @@
-body{
-    background: rgb(250, 250, 250);
+html, body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
+
+    background: rgb(250, 250, 250);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -335,14 +339,15 @@ section.project{
     color: rgb(29, 29, 29);
 
     div.light{ /* might not be needed, at least not used at the moment */
-        width:inherit;
     
         color: rgb(29, 29, 29);
         background-color: rgb(255, 255, 255);
     }
     
     div.dark{
-        width:inherit;
+        margin-left: 0;
+        margin-right: 0;
+        width: inherit;
 
         h3{
             color: rgb(243, 243, 243);
@@ -354,6 +359,8 @@ section.project{
     }
     
     div.projectpage{
+        margin-left: 0;
+        margin-right: 0;
         width: inherit;
 
         a{
@@ -488,28 +495,57 @@ section.project{
 }
 
 @media screen and (max-width: 1100px ) {
-    section.project > div.projectpage{
+    section.project{
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+
+        div.dark{
+            width:inherit;
+        }
+
+        div.projectpage{
+            width:inherit;
+            margin: auto;
+            
+            img.banner{
+                width: 70vW;
+                height: 47vw;
+            }
+            
+            img.content{
+                width: 60vW;
+                height: auto;
+            }
+            
+            p{
+                width: 70vW;
+                height: auto;
+            }
+            
+            iframe{
+                width: 60vW;
+                height: 35vw;
+            }
+        }
+    }
+}
+@media screen and (max-width: 950px ) {
+    
+    section.project{
+        div.projectpage{
         
-        margin: auto;
+            div.projectOverview{
 
-        img.banner{
-            width: 70vW;
-            height: 47vw;
-        }
-
-        img.content{
-            width: 60vW;
-            height: auto;
-        }
-
-        p{
-            width: 70vW;
-            height: auto;
-        }
-
-        iframe{
-            width: 60vW;
-            height: 35vw;
+                flex-direction: column;
+                width: 70vw;
+                li.info{
+                    p{
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                }
+            }
         }
     }
 }
@@ -548,26 +584,21 @@ section.project{
                 height: 40vw;
             }
 
-            div.projectOverview
-            {
-                flex-direction: column;
+            li{
+                width: 80vW;
+                font-size: 20px;
+                line-height: 28px;
+            }
+
+            div.projectOverview{
+
                 width: 80vw;
-                li.info{
-                    p{
-                        margin-left: 0;
-                        margin-right: 0;
-                    }
-                }
             }
         }
     }
-    section li{
-        width: 80vW;
-        font-size: 20px;
-        line-height: 28px;
-    }
 }
 @media screen and (max-width: 500px){
+
     section.project div.projectpage p{
         font-size: 18px;
     }
