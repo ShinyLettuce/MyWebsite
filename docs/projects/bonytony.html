@@ -45,7 +45,7 @@
                     There are two different weapons that offer two unique ways of movement, a revolver and a
                     shotgun, as well as an extra powerful shot upgrade for the shotgun.
                 </p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/cFBfSdH2R9w?si=57KYMuNZRK1xW_jd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/h7Bbli-7d1A?si=b5_Dl7DgldA2hQWX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <div class = "projectOverview">
                     <div class = "overviewList">
                             <h4> Project Info</h4>
@@ -58,6 +58,7 @@
                     <div class = "overviewList">
                         <h4>My Work</h4>
                         <li class = "content"><p> { Physics }</p></li>
+                        <li class = "content"><p> { Animation Implementation }</p> </li>
                         <li class = "content"><p> { Polish }</p></li>
                     </div>
                 </div>
@@ -66,7 +67,7 @@
             <div class = "dark">
                 <div class = "projectpage">
                     <h3> Physics </h3>
-                    <img class="content" src="../images/BonyTonyShotgunJumps.gif" alt="">
+                    <video class="content" src="../images/BonyTonyShotgunJumps_16_9.webm" autoplay loop muted playsinline alt=""></video>
                     <p>
                         The physics for this game had to be made from scratch since our engine
                         had no system or library in place. This meant deciding what type of collision
@@ -75,7 +76,7 @@
                     </p>
                     <p>
                         Designing this meant deciding on some constraints to make the implementation
-                        as simple as it needed to be. Since all gameplay would happen on a singular
+                        as simple as it needed to be. Since all gameplay would exist on a singular
                         2D plane, this meant all physics could be checked in 2D as well. Another early
                         decision I made was that the game would only support collisions using axis
                         aligned bounding boxes or rays.
@@ -84,7 +85,7 @@
                     <p>
                         I needed information from collisions such as the normal and point of collision.
                         As such I felt the best check to use for the player was a swept AABB collision.
-                        This was done by treating the collision as a ray vs aabb check, using the Minkowski
+                        This was done by checking the collision as a ray vs aabb, using the Minkowski
                         sum of both boxes. A separate test project was made where I could test and verify the
                         math before it was implemented in the game.
                     </p>
@@ -92,7 +93,7 @@
             </div>
 
             <div class = "projectpage">
-                <h3> Polish </h3>
+                <h3> Animation Implementation </h3>
                 <p>
                     bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
                     bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
@@ -103,27 +104,38 @@
             <div class = "dark">
                 <div class = "projectpage">
 
-                    <h3> Conclusion </h3>
+                    <h3> Polish </h3>
                     <p>
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                    </p>
-                    <p>
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                    </p>
+                    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                </p>
                 </div>
             </div>
             <div class = "projectpage">
-                <h3> Credit to the Team </h3>
-                <img class = "banner" src="../images/BonyTonyCredits.png" alt="">
+                <h3> Conclustion </h3>
+                <p>
+                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                    </p>
+                    <p>
+                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                    </p>
+            </div>
+            <div class = "dark">
+                <div class = "projectpage">
+                    <h3> Credit to the Team </h3>
+                    <img class = "banner" src="../images/BonyTonyCredits.png" alt="">
+                </div>
             </div>
                 
     </section>

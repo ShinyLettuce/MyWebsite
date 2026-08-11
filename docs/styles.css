@@ -208,6 +208,14 @@ div.showcase{
         transition-duration: 0.15s;
     }
 
+    video{
+        display: none;
+        width: 300px;
+        height: 200px;
+        border-radius: 3px;
+        transition-duration: 0.15s;
+    }
+
     img.moving{
         display:none;
     }
@@ -276,6 +284,12 @@ div.showcase:hover{
     img{
         width: 315px;
         height: 210px;
+    }
+
+    video{
+        width: 315px;
+        height: 210px;
+        display: block;
     }
 
     img.moving{
@@ -449,6 +463,16 @@ section.project{
             width: 560px;
             height: auto;
         }
+
+        video.content{
+            display: block;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 560px;
+            height: auto;
+        }
         
         iframe{
             display: block;
@@ -523,6 +547,11 @@ section.project{
                 width: 60vW;
                 height: auto;
             }
+
+            video.content{
+                width: 60vW;
+                height: auto;
+            }
             
             p{
                 width: 70vW;
@@ -567,6 +596,11 @@ section.project{
             }
         
             img.content{
+                width: 70vW;
+                height: auto;
+            }
+
+            video.content{
                 width: 70vW;
                 height: auto;
             }
