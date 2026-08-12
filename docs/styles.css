@@ -1,12 +1,42 @@
 html, body{
-    width: 100%;
+    /* width: 100%;
     height: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden; */
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 
     background: rgb(250, 250, 250);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    button.topButton
+    {
+        display: none;
+        position: fixed;
+        width: 55px;
+        height: 55px;
+        z-index: 99;
+        bottom: 5vw;
+        right: 5vw;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 18px;
+        background-color: rgba(255, 255, 255, 0.459);
+
+        border-style: solid;
+        border-radius: 50%;
+        border-color: rgb(66, 66, 66);
+        svg{
+            color: rgb(66, 66, 66);
+        }
+    }
+
+    button.topButton:hover
+    {
+        border-color: rgb(252, 143, 143);
+        svg{
+            color: rgb(255, 117, 117);
+        }
+    }
 }
 
  /* body.bonytony
@@ -461,6 +491,16 @@ section.project{
             margin-left: auto;
             margin-right: auto;
             width: 560px;
+            height: auto;
+        }
+
+        img.award{
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100px;
             height: auto;
         }
 

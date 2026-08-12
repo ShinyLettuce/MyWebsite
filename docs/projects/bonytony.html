@@ -9,6 +9,13 @@
 </head>
 
 <body class = "bonytony">
+    <script src="../scripts/scrollbutton.js"></script>
+        <button class="topButton" id="topButton" onClick="topFunction()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="19" x2="12" y2="5"></line>
+                <polyLine points="6 11 12 5 18 11"></polyLine>
+            </svg>
+        </button>
     <header>
         <div class = "Top">
             <h1><a href="../index.html">Jacob Engelhardt</a></h1>
@@ -94,11 +101,17 @@
 
             <div class = "projectpage">
                 <h3> Animation Implementation </h3>
+                <video class="content" src="../images/BonyTonyBand.webm" autoplay loop muted playsinline alt=""></video>
                 <p>
-                    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                    I was responsible for implementing most non procedural animations. In this engine
+                    that meant loading the animation data for a specific model and controlling its
+                    animation state manually in code. The Game Engine has as part of its API a basic
+                    animation controller, but it is up to the programmer to handle the state of what
+                    to play when, as well as how animations are stored and managed.
+                </p>
+                <p> A category of animated objects in the game are the animated props that are placed
+                    as set dessing in the game's levels. Prop animations had behaviours such as looping
+                    forever from start, and playing when shot every time&mdash;or only the fist time.
                 </p>
             </div>
             <div class = "dark">
@@ -114,7 +127,7 @@
                 </div>
             </div>
             <div class = "projectpage">
-                <h3> Conclustion </h3>
+                <h3> Conclusion </h3>
                 <p>
                         bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
                         bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
