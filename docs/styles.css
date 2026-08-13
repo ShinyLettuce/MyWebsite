@@ -631,17 +631,18 @@ section.project{
         div.projectpage{
             
             img.banner{
-                width: 80vW;
-                height: 53vw;
+                margin-top: 30px;
+                width: 100vW;
+                height: auto;
             }
         
             img.content{
-                width: 70vW;
+                width: 100vW;
                 height: auto;
             }
 
             video.content{
-                width: 70vW;
+                width: 100vw;
                 height: auto;
             }
     
@@ -660,8 +661,8 @@ section.project{
             }
     
             iframe{
-                width: 70vW;
-                height: 40vw;
+                width: 100vW;
+                height: 56.2vw;
             }
 
             li{
@@ -767,10 +768,12 @@ section.bio{
 footer{
     background: rgb(24, 23, 23);
     color: white;
-    padding: 20px;
+    padding: 15px;
 
-    h1{
+    h2{
         color: white;
+        font-size: 34px;
+        margin-top: 20px;
     }
 
     a{
@@ -781,13 +784,26 @@ footer{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        column-gap: 50px;
+        column-gap: 30px;
         row-gap: 30px;
 
-        img{
-            width: 80px;
-            height: auto;
+        border-bottom: 2px solid rgb(43, 43, 43);
+
+        div.contact-widget{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+
+            img{
+                width: 60px;
+                height: auto;
+            }
         }
+    }
+
+    p.copy
+    {
+        color:rgb(102, 102, 102) 
     }
     
     @media screen and (min-width: 700px ){
