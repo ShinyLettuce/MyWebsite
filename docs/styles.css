@@ -549,8 +549,8 @@ section.project{
             margin-bottom: 15px;
             margin-left: auto;
             margin-right: auto;
-            width: 100px;
-            height: auto;
+            width: auto;
+            height: 110px;
         }
 
         video.content{
