@@ -486,7 +486,7 @@ section.project{
         
         button.codeCollapsible{
             display:block;
-            width: 800px;
+            width: 780px;
             height: 55px;
             margin-left: auto;
             margin-right: auto;
@@ -506,17 +506,31 @@ section.project{
             border: 2px solid rgb(35, 33, 61);
         }
 
+        button.codeCollapsible:after{
+            content: '\02795\FE0E';
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            font-size: 14px;
+            float: right;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+         button.codeCollapsible.active:after{
+            content: '\02796\FE0E';
+        }
+
         pre{
             margin-top: 0;
             margin-left: auto;
             margin-right: auto;
             background-color: rgb(17, 17, 17);
-            width: 800px;
-            max-width: 800px;
+            width: 780px;
+            /* max-width: 780px; */
             max-height: 0;
             white-space: pre-wrap;
             overflow: hidden;
-            transition: max-height 0.4s ease-in-out;
+            transition: max-height 0.36s cubic-bezier(0.8, 0.1, 0.2, 0.9);
         }
         
         img.content{
@@ -635,6 +649,14 @@ section.project{
                 height: auto;
             }
             
+            button.codeCollapsible{
+                width: 80vw;
+            }
+
+            pre{
+                width: 80vw;
+            }
+
             p{
                 width: 70vW;
                 height: auto;
@@ -700,6 +722,14 @@ section.project{
 
             h3{
                 width: 80vW;
+            }
+
+            button.codeCollapsible{
+                width: 95vw;
+            }
+
+            pre{
+                width: 95vw;
             }
     
             iframe{

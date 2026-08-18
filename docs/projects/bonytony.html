@@ -71,7 +71,7 @@
                                 (5 programmers)</p></li>
                             <li class = "info"><p><b>Engine:</b> The Game Engine <br>
                                 (In-house engine)</p></li>
-                            <li class = "info"><p><b>Duration:</b> 10 weeks</p></li>
+                            <li class = "info"><p><b>Duration:</b> 10 weeks (50%)</p></li>
                     </div>
                     <div class = "overviewList">
                         <h4>My Work</h4>
@@ -123,7 +123,8 @@ inline float AABBLineCollision(const AABB& aAABB, const Ray& aRay)
 
 	if (abs(lineDirection.x) < FLT_EPSILON)
 	{
-		if (lineStart.x < topCornerPositionX || lineStart.x >  topCornerPositionX + aAABB.size.x)
+		if (lineStart.x < topCornerPositionX ||
+                    lineStart.x >  topCornerPositionX + aAABB.size.x)
 		{
 			return FLT_MAX;
 		}
@@ -148,7 +149,8 @@ inline float AABBLineCollision(const AABB& aAABB, const Ray& aRay)
 	}
 	if (abs(lineDirection.y) < FLT_EPSILON)
 	{
-		if (lineStart.y > topCornerPositionY || lineStart.y < topCornerPositionY - aAABB.size.y)
+		if (lineStart.y > topCornerPositionY ||
+                    lineStart.y < topCornerPositionY - aAABB.size.y)
 		{
 			return FLT_MAX;
 		}
