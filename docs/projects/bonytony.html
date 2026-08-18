@@ -5,10 +5,14 @@
     <meta name="viewport" content="initial-scale=1.0 width=device-width" />
 <title>Jacob Engelhardt</title>
     <link rel="stylesheet" href="../styles.css?version=15">
+    <link rel="stylesheet" href="../codestyles/night-owl.css">
+    <script src="../scripts/highlight.min.js"></script>
     <link rel="icon" type="image/x-icon" href="../images/cubecube.png">
 </head>
 
 <body class = "bonytony">
+    <script>hljs.highlightAll();</script>
+    
     <script src="../scripts/scrollbutton.js"></script>
     <button class="topButton" id="topButton" onClick="topFunction()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -37,7 +41,7 @@
                 <h2>Bony Tony: The Revenge</h2>
                 <p>
                     <a href="https://eaxcy.itch.io/bony-tony" target="_blank">
-                        <button> Open Itch.io page </button>
+                        <button class="external"> Open Itch.io page </button>
                     </a>
                 </p>
                 <p>
@@ -46,13 +50,20 @@
                 </p>
                 <p>
                     Bony Tony is a platformer where your main mode of movement is by shooting, which launches
-                    your character in the opposite direction.
-                </p>
-                <p>
-                    There are two different weapons that offer two unique ways of movement, a revolver and a
-                    shotgun, as well as an extra powerful shot upgrade for the shotgun.
+                    your character in the opposite direction. You can reload on the ground, or chain reloads
+                    in the air by shooting enemies.
                 </p>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/h7Bbli-7d1A?si=b5_Dl7DgldA2hQWX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h3> Responsibilities </h3>
+                <p>
+                    Appointed head responsible of the programming team, tasked with
+                    tracking and maintaining scope and progress of programming efforts.
+                </p>
+                <p>
+                    Took part in handling the technical communications with our external
+                    audio team.
+                </p>
+                
                 <div class = "projectOverview">
                     <div class = "overviewList">
                             <h4> Project Info</h4>
@@ -64,19 +75,19 @@
                     </div>
                     <div class = "overviewList">
                         <h4>My Work</h4>
-                        <li class = "content"><p> { Physics }</p></li>
-                        <li class = "content"><p> { Animation Implementation }</p> </li>
-                        <li class = "content"><p> { Polish }</p></li>
+                        <li class = "content"><a href="#Physics">Physics</a></li>
+                        <li class = "content"><a href="#Animation Implementation">Animation Implementation</a> </li>
+                        <li class = "content"><a href="#Polish">Misc. Additions</a></li>
                     </div>
                 </div>
             </div>
             
             <div class = "dark">
                 <div class = "projectpage">
-                    <h3> Physics </h3>
+                    <h3 id="Physics"> Physics </h3>
                     <video class="content" src="../images/BonyTonyShotgunJumps_16_9.webm" autoplay loop muted playsinline alt=""></video>
                     <p>
-                        The physics for this game had to be made from scratch since our engine
+                        The physics for this game had to be written from scratch since our engine
                         had no system or library in place. This meant deciding what type of collision
                         shapes we wanted to support and making sure we got necessary data back when
                         objects collided.
@@ -96,11 +107,78 @@
                         sum of both boxes. A separate test project was made where I could test and verify the
                         math before it was implemented in the game.
                     </p>
+                    <button type="button" class="codeCollapsible"> <b>AABBLineCollision</b></button>
+                    <pre><code class="language-cpp">
+// Returns a number between 0 and 1 representing where along the line a collision occurred. Returns -1 on no collision.
+
+inline float AABBLineCollision(const AABB& aAABB, const Ray& aRay)
+{
+	float tMin = 0.f;
+	float tMax = 1.f;
+
+	const float topCornerPositionX = aAABB.position.x - aAABB.size.x * 0.5f;
+	const float topCornerPositionY = aAABB.position.y + aAABB.size.y * 0.5f;
+	Tga::Vector2f lineStart = aRay.origin;
+	Tga::Vector2f lineDirection = aRay.direction.GetNormalized() * aRay.magnitude;
+
+	if (abs(lineDirection.x) < FLT_EPSILON)
+	{
+		if (lineStart.x < topCornerPositionX || lineStart.x >  topCornerPositionX + aAABB.size.x)
+		{
+			return FLT_MAX;
+		}
+	}
+	else
+	{
+		float t1 = (topCornerPositionX - lineStart.x) / lineDirection.x;
+		float t2 = (topCornerPositionX + aAABB.size.x - lineStart.x) / lineDirection.x;
+    
+		if (t1 > t2)
+		{
+			std::swap(t1, t2);
+		}
+    
+		tMin = std::max(tMin, t1);
+		tMax = std::min(tMax, t2);
+    
+		if (tMin > tMax)
+		{
+			return FLT_MAX;
+		}
+	}
+	if (abs(lineDirection.y) < FLT_EPSILON)
+	{
+		if (lineStart.y > topCornerPositionY || lineStart.y < topCornerPositionY - aAABB.size.y)
+		{
+			return FLT_MAX;
+		}
+	}
+	else
+	{
+		float t1 = (topCornerPositionY - lineStart.y) / lineDirection.y;
+		float t2 = (topCornerPositionY - aAABB.size.y - lineStart.y) / lineDirection.y;
+    
+		if (t1 > t2)
+		{
+			std::swap(t1, t2);
+		}
+    
+		tMin = std::max(tMin, t1);
+		tMax = std::min(tMax, t2);
+    
+		if (tMin > tMax)
+		{
+			return FLT_MAX;
+		}
+	}
+	return tMin;
+} 
+                    </code></pre>
                 </div>
             </div>
 
             <div class = "projectpage">
-                <h3> Animation Implementation </h3>
+                <h3 id="Animation Implementation"> Animation Implementation </h3>
                 <video class="content" src="../images/BonyTonyBand.webm" autoplay loop muted playsinline alt=""></video>
                 <p>
                     I was responsible for implementing most non procedural animations. In this engine
@@ -117,7 +195,7 @@
             <div class = "dark">
                 <div class = "projectpage">
 
-                    <h3> Polish </h3>
+                    <h3 id="Polish"> Polish </h3>
                     <p>
                     bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
                     bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
@@ -186,5 +264,7 @@
             &copy; 2026 All rights reserved
         </p>
     </footer>
+
+    <script src="../scripts/collapsible.js"></script>
 </body>
 </html>                              

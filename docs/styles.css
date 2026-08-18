@@ -427,7 +427,7 @@ section.project{
             margin-right: auto;
         }
     
-        button {
+        button.external {
             width: 300px;
             height: 50px;
             
@@ -444,7 +444,7 @@ section.project{
             transition-duration: 0.18s;
         }
     
-        button:hover{
+        button.external:hover{
             background-color:rgb(204, 204, 204);
         }
 
@@ -482,6 +482,41 @@ section.project{
             margin-right: auto;
             height: 456px;
             width: 684px;
+        }
+        
+        button.codeCollapsible{
+            display:block;
+            width: 800px;
+            height: 55px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(35, 33, 61);
+            border: 2px solid rgb(100, 99, 163);
+            cursor: pointer;
+
+            color: rgb(236, 236, 236);
+            font-family: monospace;
+            font-size: 22px;
+            text-align: start;
+            text-indent: 50px;
+        }
+
+        button.active, button.codeCollapsible:hover{
+            background-color: rgb(100, 99, 163);
+            border: 2px solid rgb(35, 33, 61);
+        }
+
+        pre{
+            margin-top: 0;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(17, 17, 17);
+            width: 800px;
+            max-width: 800px;
+            max-height: 0;
+            white-space: pre-wrap;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out;
         }
         
         img.content{
@@ -552,10 +587,17 @@ section.project{
                 }
 
                 li.content{
-                    p{
-                        font-size: 24px;
+                    a{
                         margin-bottom: 12px;
                         margin-top: 12px;
+                        font-size: 22px;
+                    }
+                }
+
+                li.content:hover{
+                    color:#ff5773;
+                    a{
+                        color:#ff5773;
                     }
                 }
             }
