@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="initial-scale=1.0 width=device-width" />
-<title>Jacob Engelhardt</title>
+<title>Jacob Engelhardt | Bony Tony</title>
     <link rel="stylesheet" href="../styles.css?version=15">
     <link rel="stylesheet" href="../codestyles/night-owl.css">
     <script src="../scripts/highlight.min.js"></script>
@@ -92,19 +92,21 @@
                         shapes we wanted to support and making sure we got necessary data back when
                         objects collided.
                     </p>
+                    <h4>Collision Test</h4>
                     <p>
-                        Designing this meant deciding on some constraints to make the implementation
-                        as simple as it needed to be. Since all gameplay would exist on a singular
-                        2D plane, this meant all physics could be checked in 2D as well. Another early
-                        decision I made was that the game would only support collisions using axis
-                        aligned bounding boxes or rays.
+                        I had to analyse the problem to make the implementation as simple as it needed
+                        to be. Since all gameplay would exist on a singular 2D plane, this meant all
+                        physics could be checked in 2D as well. Another early constraint I proposed was that
+                        the game would only support collisions using axis aligned bounding boxes or rays.
+                        Our graphical team accepted this and worked on their models with this in mind to avoid
+                        any mismatches.
                     </p>
                     <img class="content" src="../images/AABBSweepTest.gif" alt="">
                     <p>
                         I needed information from collisions such as the normal and point of collision.
                         As such I felt the best check to use for the player was a swept AABB collision.
-                        This was done by checking the collision as a ray vs aabb, using the Minkowski
-                        sum of both boxes. A separate test project was made where I could test and verify the
+                        This was done by checking the collision as a ray vs the Minkowski sum of both
+                        boxes. A separate test project was made where I could test and verify the
                         math before it was implemented in the game.
                     </p>
                     <button type="button" class="codeCollapsible"> <b>AABBLineCollision</b></button>
@@ -189,15 +191,11 @@ inline float AABBLineCollision(const AABB& aAABB, const Ray& aRay)
                     animation controller, but it is up to the programmer to handle the state of what
                     to play when, as well as how animations are stored and managed.
                 </p>
-                <p> A category of animated objects in the game are the animated props that are placed
-                    as set dessing in the game's levels. Prop animations had behaviours such as looping
-                    forever from start, and playing when shot every time&mdash;or only the fist time.
-                </p>
             </div>
             <div class = "dark">
                 <div class = "projectpage">
 
-                    <h3 id="Polish"> Polish </h3>
+                    <h3 id="Polish"> Misc. Additions </h3>
                     <p>
                     bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
                     bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
@@ -207,29 +205,34 @@ inline float AABBLineCollision(const AABB& aAABB, const Ray& aRay)
                 </div>
             </div>
             <div class = "projectpage">
-                <h3> Conclusion </h3>
+                <h3> Project Reflections </h3>
                 <p>
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                    </p>
-                    <p>
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                    </p>
+                    I was very happy with how this project turned out! We managed to keep the
+                    scope reasonable and even leaned into the limitations. We could have less
+                    animations if the player did not walk, so we put cement on his feet. Enemies
+                    had to respawn, so all characters became undead skeletons. The game grew very
+                    organically that way. I think it was made possible
+                    by our clear vision of the simple core mechanics on which the aesthetics were
+                    built.
+                </p>
+                <p>
+                    Programming wise I was really glad to work on a larger game project in
+                    C++. Having an entrypoint and loading scenes exclusively as data allowed our
+                    team to solve our problems in a more data oriented/procedural fashion than most
+                    game engines would allow.
+                    Other disciplines relied on our implementation for their pipelines so a lot of
+                    cross discipline communication was needed in that regard. Unfortunately we came
+                    around to testing the animation pipeline in engine quite late meaning less could
+                    be polished before the deadline.
+                </p>
+                <h4>Key Takeaways</h4>
             </div>
-            <div class = "dark">
-                <div class = "projectpage">
-                    <h3> Credit to the Team </h3>
-                    <img class = "banner" src="../images/BonyTonyCredits.png" alt="">
-                </div>
+
+            <div class = "projectpage">
+                <h3> Credit to the Team </h3>
+                <img class = "banner" src="../images/BonyTonyCredits.png" alt="">
             </div>
+
                 
     </section>
     <footer>
