@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="initial-scale=1.0 width=device-width" />
-<title>Jacob Engelhardt</title>
+    <title>Jacob Engelhardt</title>
     <link rel="stylesheet" href="../styles.css?version=15">
     <link rel="icon" type="image/x-icon" href="../images/cubecube.png">
 </head>
@@ -11,28 +11,30 @@
 <body>
     <script src="../scripts/scrollbutton.js"></script>
     <button class="topButton" id="topButton" onClick="topFunction()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-             <line x1="12" y1="19" x2="12" y2="5"></line>
-             <polyLine points="6 11 12 5 18 11"></polyLine>
-         </svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyLine points="6 11 12 5 18 11"></polyLine>
+        </svg>
     </button>
     <header>
-        <div class = "Top">
+        <div class="Top">
             <h1><a href="../index.html">Jacob Engelhardt</a></h1>
         </div>
-        <div class = "Top">
+        <div class="Top">
             <nav>
                 <ul>
                     <li><a href="../index.html">Portfolio</a></li>
                     <li><a href="../about.html">About</a></li>
                     <li><a href="../documents/CV_Jacob_Engelhardt.pdf?version=2" target="_blank">CV</a></li>
-                    <li><a href="https://www.linkedin.com/in/jacob-engelhardt-681a51248/" target="_blank"><img src="../images/linkedin-icon.png" alt=""></a></li>
-                </ul> 
+                    <li><a href="https://www.linkedin.com/in/jacob-engelhardt-681a51248/" target="_blank"><img
+                                src="../images/linkedin-icon.png" alt=""></a></li>
+                </ul>
             </nav>
         </div>
     </header>
-    <section class = "project">
-        <div class ="projectpage">
+    <section class="project">
+        <div class="projectpage">
             <img class="banner" src="../images/QamaBanner.png" alt="">
             <h2>Qama</h2>
             <p>
@@ -48,46 +50,74 @@
                 Qama is a top down action exploration game where you fight your way through levels and explore to
                 unlock the road forward.
             </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/IcrNbTclcyE?si=gU1N5-fcz-9mBW0J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/IcrNbTclcyE?si=gU1N5-fcz-9mBW0J"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <img class="award" src="../images/draft-selection.webp" alt="">
-            <div class = "projectOverview">
-                <div class = "overviewList">
-                        <h4> Project Info</h4>
-                        <li class = "info"><p><b>Team Size:</b> 13 <br>
-                            (4 programmers)</p></li>
-                        <li class = "info"><p><b>Engine:</b> The Game Engine <br>
-                            (In-house engine)</p></li>
-                        <li class = "info"><p><b>Duration:</b> 10 weeks</p></li>
+            <div class="projectOverview">
+                <div class="overviewList">
+                    <h4> Project Info</h4>
+                    <li class="info">
+                        <p><b>Team Size:</b> 13 <br>
+                            (4 programmers)</p>
+                    </li>
+                    <li class="info">
+                        <p><b>Engine:</b> The Game Engine <br>
+                            (In-house engine)</p>
+                    </li>
+                    <li class="info">
+                        <p><b>Duration:</b> 10 weeks</p>
+                    </li>
                 </div>
-                <div class = "overviewList">
+                <div class="overviewList">
                     <h4>My Work</h4>
-                    <li class = "content"><p> { Tilemap }</p></li>
-                    <li class = "content"><p> { Polish }</p></li>
+                    <li class="content">
+                        <p> { Tilemap }</p>
+                    </li>
+                    <li class="content">
+                        <p> { Polish }</p>
+                    </li>
                 </div>
             </div>
         </div>
 
-        <div class = "dark">
-                <div class = "projectpage">
-                    <h3> Tilemap </h3>
-                    <img class="content" src="../images/QamaTilePrototype.png" alt="">
-                    <p>
-                        bla bla
-                    </p>
-                    <p>
-                        bla bla
-                    </p>
-                    <img class="content" src="../images/AABBSweepTest.gif" alt="">
-                    <p>
-                        bla bla
-                    </p>
-                </div>
+        <div class="dark">
+            <div class="projectpage">
+                <h3> Tilemap </h3>
+                <img class="content" src="../images/QamaTilePrototype.png" alt="">
+                <p>
+                    Level terrain was built in the game editor by filling in a three
+                    dimensional grid of blocks.
+                </p>
+                <p>
+                    To avoid physics based character controllers, characters were made to
+                    walk on a grid representation of the world. To create the walkable grid,
+                    the blocks placed in the editor were converted into a two dimensional
+                    tilemap where cells stored their height.
+                </p>
+                <p>
+                    Inspired by Oskar Stålberg on how to make visually appealing grids, the three dimensional grid was
+                    also used to generate a visual terrain that would feel less blocky.
+                </p>
+                <img class="content" src="../images/dualgridtweet.png" alt="">
+                <img class="content" src="../images/dualgridimg2.jpg" alt="">
+                <h4>The Visual Grid</h4>
+                <h4>The Walkable Grid</h4>
+                <p>
+                    bla bla
+                </p>
+                <img class="content" src="../images/AABBSweepTest.gif" alt="">
+                <p>
+                    bla bla
+                </p>
             </div>
+        </div>
     </section>
     <footer>
         <p>
             <b>CONTACT ME</b>
-            <h2>Let's have a conversation!</h2>
+        <h2>Let's have a conversation!</h2>
         </p>
 
         <div class="contact">
@@ -119,4 +149,5 @@
         </p>
     </footer>
 </body>
-</html>                              
+
+</html>

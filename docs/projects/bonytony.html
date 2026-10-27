@@ -94,9 +94,8 @@
                     </p>
                     <h4>Collision Test</h4>
                     <p>
-                        I had to analyse the problem to make the implementation as simple as it needed
-                        to be. Since all gameplay would exist on a singular 2D plane, this meant all
-                        physics could be checked in 2D as well. Another early constraint I proposed was that
+                        Since all gameplay would exist on a singular 2D plane, this meant all
+                        physics could be checked in 2D. Another early constraint I proposed was that
                         the game would only support collisions using axis aligned bounding boxes or rays.
                         Our graphical team accepted this and worked on their models with this in mind to avoid
                         any mismatches.
@@ -107,7 +106,13 @@
                         As such I felt the best check to use for the player was a swept AABB collision.
                         This was done by checking the collision as a ray vs the Minkowski sum of both
                         boxes. A separate test project was made where I could test and verify the
-                        math before it was implemented in the game.
+                        math before it was implemented in the game. With the sweep test we knew
+                        when the player hit a wall or ceiling and zero their velocity in that direction
+                        accordingly.
+                    </p>
+                    <p>
+                        To know when the player hit the ground I cast two raycasts downward, one for each bottom corner.
+                        On collision this would snap the player to the ground and disable their gravity.
                     </p>
                     <button type="button" class="codeCollapsible"> <b>AABBLineCollision</b></button>
                     <pre><code class="language-cpp">
@@ -178,6 +183,17 @@ inline float AABBLineCollision(const AABB& aAABB, const Ray& aRay)
 	return tMin;
 } 
                     </code></pre>
+                    <h4>Life on the edge</h4>
+                    <p>
+                        The world and its colliders were placed in a grid-like fashion and a hurdle for the collision was to
+                        not get caught on any seams between colliders. Unlucky edge collisions could cause the player to stand on
+                        vertical surfaces or stop on nothing as they slide along the floor.
+                    </p>
+                    <p>
+                        My solution for this was to shrink the player collider slightly, and on collision the player
+                        would snap a small distance away from the specific surface.
+                    </p>
+                    <h4></h4>
                 </div>
             </div>
 
