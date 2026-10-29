@@ -20,6 +20,14 @@
              <polyLine points="6 11 12 5 18 11"></polyLine>
          </svg>
     </button>
+
+    <div class = "chapterView">
+        <h5> Chapters</h5>
+        <div class = "chapters">
+            <a class="relevant" href="#"><li>Introduction</li></a>
+        </div>
+    </div>
+
     <header>
         <div class = "Top">
             <h1><a href="../index.html">Jacob Engelhardt</a></h1>
@@ -84,7 +92,7 @@
             
             <div class = "dark">
                 <div class = "projectpage">
-                    <h3 id="Physics"> Physics </h3>
+                    <h3 class = "work" id="Physics"> Physics </h3>
                     <video class="content" src="../images/BonyTonyShotgunJumps_16_9.webm" autoplay loop muted playsinline alt=""></video>
                     <p>
                         The physics for this game had to be written from scratch since our engine
@@ -183,7 +191,7 @@ inline float AABBLineCollision(const AABB& aAABB, const Ray& aRay)
 	return tMin;
 } 
                     </code></pre>
-                    <h4>Life on the edge</h4>
+                    <h4>Caught on the edge</h4>
                     <p>
                         The world and its colliders were placed in a grid-like fashion and a hurdle for the collision was to
                         not get caught on any seams between colliders. Unlucky edge collisions could cause the player to stand on
@@ -198,7 +206,7 @@ inline float AABBLineCollision(const AABB& aAABB, const Ray& aRay)
             </div>
 
             <div class = "projectpage">
-                <h3 id="Animation Implementation"> Animation Implementation </h3>
+                <h3 class = "work" id="Animation Implementation"> Animation Implementation </h3>
                 <video class="content" src="../images/BonyTonyBand.webm" autoplay loop muted playsinline alt=""></video>
                 <p>
                     I was responsible for implementing most non procedural animations. In this engine
@@ -211,7 +219,7 @@ inline float AABBLineCollision(const AABB& aAABB, const Ray& aRay)
             <div class = "dark">
                 <div class = "projectpage">
 
-                    <h3 id="Polish"> Misc. Additions </h3>
+                    <h3 class = "work" id="Polish"> Misc. Additions </h3>
                     <p>
                     bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
                     bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
@@ -287,5 +295,6 @@ inline float AABBLineCollision(const AABB& aAABB, const Ray& aRay)
     </footer>
 
     <script src="../scripts/collapsible.js"></script>
+    <script src="../scripts/chapterview.js"></script>
 </body>
 </html>                              

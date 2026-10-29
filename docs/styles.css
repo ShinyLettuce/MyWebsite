@@ -1,4 +1,5 @@
-html, body{
+html,
+body {
     /* width: 100%;
     height: 100%;
     overflow-x: hidden; */
@@ -7,10 +8,9 @@ html, body{
     scroll-behavior: smooth;
 
     background: rgb(250, 250, 250);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-    button.topButton
-    {
+    button.topButton {
         display: none;
         position: fixed;
         width: 55px;
@@ -25,21 +25,22 @@ html, body{
         border-style: solid;
         border-radius: 50%;
         border-color: rgb(66, 66, 66);
-        svg{
+
+        svg {
             color: rgb(66, 66, 66);
         }
     }
 
-    button.topButton:hover
-    {
+    button.topButton:hover {
         border-color: rgb(252, 143, 143);
-        svg{
+
+        svg {
             color: rgb(255, 117, 117);
         }
     }
 }
 
- /* body.bonytony
+/* body.bonytony
 {
     background: rgb(228, 126, 126);
     background-image: url('./images/BonyTonyBanner.png');
@@ -60,34 +61,34 @@ body.rasterizer
     background: rgb(241, 199, 185);
 }  */
 
-header{
+header {
     padding: 40px;
     padding-bottom: 10px;
     background: #ffffff;
     color: rgb(0, 0, 0);
 
-    nav img{
+    nav img {
         width: 20px;
         height: 20px;
     }
 
-    ul{
+    ul {
         margin: 0px;
         padding: 0px;
         list-style-type: none;
     }
-    
-    li{
+
+    li {
         margin-right: 20px;
         display: inline-block;
     }
 
-    div.Top{
+    div.Top {
         display: inline-block;
         margin-right: 20px;
         text-transform: uppercase;
-    
-        h1{
+
+        h1 {
             font-size: 32px;
             color: rgb(0, 0, 0);
         }
@@ -95,21 +96,21 @@ header{
 }
 
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
-h2{
+h2 {
     font-size: 36px;
 }
 
-div{
+div {
     display: inline-block;
     margin: auto;
 }
 
-section{
+section {
     margin-left: 12vw;
     margin-right: auto;
     width: 60vw;
@@ -117,7 +118,7 @@ section{
     height: auto;
 }
 
-div.introduction{
+div.introduction {
     display: flex;
 
     padding-bottom: 30px;
@@ -128,7 +129,7 @@ div.introduction{
     border-bottom: 3px solid rgb(235, 235, 235);
     border-top: 3px solid rgb(235, 235, 235);
 
-    img{
+    img {
         width: 170px;
         height: auto;
         margin-top: auto;
@@ -139,61 +140,66 @@ div.introduction{
     }
 }
 
-div.introText{
+div.introText {
     margin-top: auto;
     margin-left: 0px;
     width: 700px;
 
-    h2{
+    h2 {
         font-size: 52px;
         margin-bottom: 20px;
         margin-top: auto;
     }
 
-    p{
+    p {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 22px;
     }
 }
 
-@media screen and (max-width: 1560px ){
-    div.introduction{
+@media screen and (max-width: 1560px) {
+    div.introduction {
         flex-direction: column;
 
-        img{
+        img {
             margin: auto;
         }
     }
-    div.introText{
+
+    div.introText {
         text-align: center;
         margin: auto;
         width: 80%;
     }
 }
-@media screen and (max-width: 850px ){
-    div.introText{
+
+@media screen and (max-width: 850px) {
+    div.introText {
         width: 425px;
 
     }
 }
-@media screen and (max-width: 700px ){
-    div.introduction{
-        img{
+
+@media screen and (max-width: 700px) {
+    div.introduction {
+        img {
             width: 35vw;
         }
+
         padding-bottom: 5vw;
         padding-top: 5vw;
     }
-    div.introText{
+
+    div.introText {
         width: 75vw;
 
-        h2{
+        h2 {
             margin-top: 2vw;
             margin-bottom: 2vw;
             font-size: 36px;
         }
 
-        p{
+        p {
             margin-top: 1vw;
             margin-bottom: 1vw;
             font-size: 18px;
@@ -201,28 +207,28 @@ div.introText{
     }
 }
 
-div.title{
+div.title {
     display: flex;
-    padding-left:20px;
+    padding-left: 20px;
 
-    h2{
+    h2 {
         font-size: 40px;
     }
 }
 
-div.showcaselist{
+div.showcaselist {
     display: flex;
     flex-wrap: wrap;
-    align-items:flex-start;
+    align-items: flex-start;
     column-gap: 20px;
 
-    a{
+    a {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
-div.showcase{
+div.showcase {
     margin-top: 0px;
     width: 300px;
     color: rgb(54, 54, 54);
@@ -231,14 +237,14 @@ div.showcase{
     border-left: 3px solid rgb(235, 235, 235);
     transition-duration: 0.15s;
 
-    img{
+    img {
         width: 300px;
         height: 200px;
         border-radius: 3px;
         transition-duration: 0.15s;
     }
 
-    video{
+    video {
         display: none;
         width: 300px;
         height: 200px;
@@ -246,24 +252,24 @@ div.showcase{
         transition-duration: 0.15s;
     }
 
-    img.moving{
-        display:none;
+    img.moving {
+        display: none;
     }
 
-    img.static{
-        display:block;
+    img.static {
+        display: block;
     }
 
-    h3{
+    h3 {
         font-size: 36px;
     }
 
-    h4{
+    h4 {
         font-size: 23px;
         margin: 0;
     }
 
-    p{
+    p {
         margin-top: 0px;
         margin-bottom: 17px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -271,20 +277,20 @@ div.showcase{
         line-height: 30px;
     }
 
-    p.date{
+    p.date {
         color: gray;
         margin-top: 0px;
-        margin-bottom:30px;
+        margin-bottom: 30px;
         line-height: 5px;
         font-size: 18px;
     }
 
-    a{
+    a {
         text-decoration: none;
         color: rgb(22, 22, 22);
     }
 
-    div.showcasetaglist{
+    div.showcasetaglist {
         margin-top: 8px;
         display: flex;
         flex-wrap: wrap;
@@ -292,114 +298,171 @@ div.showcase{
         column-gap: 3px;
         row-gap: 3px;
     }
-    
-    div.showcasetag{
+
+    div.showcasetag {
         margin: 0px;
         padding: 4px;
         background-color: #ffffff;
         border: 3px solid rgb(230, 230, 230);
         border-radius: 4px;
         box-shadow: 3px 3px 3px 0 rgb(206, 206, 206);
-    
+
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 17px;
         color: rgb(54, 54, 54);
     }
 }
 
-div.showcase:hover{
+div.showcase:hover {
     border-left: 10px solid rgb(253, 180, 180);
     border-radius: 10px;
 
-    img{
+    img {
         width: 315px;
         height: 210px;
     }
 
-    video{
+    video {
         width: 315px;
         height: 210px;
         display: block;
     }
 
-    img.moving{
-        display:block;
+    img.moving {
+        display: block;
     }
 
-    img.static{
-        display:none;
+    img.static {
+        display: none;
     }
 
-    div.showcasetag{
+    div.showcasetag {
         border: 3px solid rgb(253, 180, 180);
         box-shadow: 3px 3px 3px 0 rgb(226, 206, 206);
     }
 }
 
-@media screen and (max-width: 1180px ){
-    section{
+@media screen and (max-width: 1180px) {
+    section {
         width: 70vw;
-        margin-left:auto;
+        margin-left: auto;
     }
 }
-@media screen and (max-width: 700px){
-    section{
+
+@media screen and (max-width: 700px) {
+    section {
         width: 100vw;
-        margin-left:0;
+        margin-left: 0;
     }
-    section div.showcaselist{
+
+    section div.showcaselist {
         flex-direction: column;
     }
-    div.showcase{ 
+
+    div.showcase {
         width: 80vw;
         margin-left: auto;
         margin-right: auto;
     }
-    div.showcase h3{
+
+    div.showcase h3 {
         font-size: 32px;
     }
-    div.showcase p{
+
+    div.showcase p {
         font-size: 20px;
         line-height: 28px;
     }
 }
-@media screen and (max-width: 400px){
-    div.showcase img{
+
+@media screen and (max-width: 400px) {
+    div.showcase img {
         width: 75vw;
         height: auto;
     }
 
-    div.showcase img:hover{
+    div.showcase img:hover {
         width: 80vw;
         height: auto;
     }
 }
 
-div h3{
+div h3 {
     font-size: 30px;
     margin-bottom: 10px;
     margin-top: 15px;
 }
 
-section.project{
+div.chapterView {
+    row-gap: 60px;
+    position: fixed;
+    width: 300px;
+    height: 275px;
+    z-index: 99;
+    bottom: 50vh;
+    right: 4vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+
+    h5 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 18px;
+        text-align: left;
+        color:rgb(85, 84, 84)
+    }
+
+    div.chapters {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: flex-start;
+
+        a {
+            border: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0);
+            color:rgb(128, 127, 127);
+            list-style-type: disc;
+            list-style-position: inside;
+        }
+
+        a.relevant {
+            color:rgb(252, 111, 111);
+            font-size: 22px;
+        }
+    }
+
+
+    button {
+        border: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 18px;
+        background-color: rgba(0, 0, 0, 0);
+        list-style-type: disc;
+    }
+}
+
+section.project {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     width: calc(60vw + 120px);
     color: rgb(29, 29, 29);
 
-    div.light{ /* might not be needed, at least not used at the moment */
-    
+    div.light {
+        /* might not be needed, at least not used at the moment */
+
         color: rgb(29, 29, 29);
         background-color: rgb(255, 255, 255);
     }
-    
-    div.dark{
+
+    div.dark {
         margin-left: 0;
         margin-right: 0;
         width: inherit;
 
-        h3{
+        h3 {
             color: rgb(243, 243, 243);
             border-color: rgb(243, 243, 243);
         }
@@ -407,17 +470,17 @@ section.project{
         color: rgb(231, 232, 236);
         background-color: rgb(29, 27, 28);
     }
-    
-    div.projectpage{
+
+    div.projectpage {
         margin-left: 0;
         margin-right: 0;
         width: inherit;
 
-        a{
+        a {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        li{
+        li {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 18px;
             line-height: 28px;
@@ -429,36 +492,36 @@ section.project{
             margin-left: auto;
             margin-right: auto;
         }
-    
+
         button.external {
             width: 300px;
             height: 50px;
-            
+
             font-size: 20px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            
+
             border: 2px solid rgb(34, 34, 34);
             border-radius: 3px;
-            
-            background-color:rgb(241, 241, 241);
+
+            background-color: rgb(241, 241, 241);
             box-shadow: 3px 3px 3px 0 rgba(150, 150, 150);
             cursor: pointer;
             transition-duration: 0.18s;
         }
-    
-        button.external:hover{
-            background-color:rgb(204, 204, 204);
+
+        button.external:hover {
+            background-color: rgb(204, 204, 204);
         }
-        
-        h2{
+
+        h2 {
             color: rgb(0, 0, 0);
             width: 650px;
             margin-left: auto;
             margin-right: auto;
         }
-        
-        h3{
+
+        h3 {
             font-size: 32px;
             width: 590px;
             margin-left: auto;
@@ -468,7 +531,7 @@ section.project{
             padding-bottom: 5px;
         }
 
-        h4{
+        h4 {
             font-size: 24px;
             margin-bottom: 20px;
             border-bottom: 3px solid;
@@ -478,8 +541,8 @@ section.project{
             margin-left: auto;
             margin-right: auto;
         }
-        
-        p{
+
+        p {
             width: 650px;
             margin-top: 12px;
             margin-bottom: 25px;
@@ -489,17 +552,17 @@ section.project{
             font-size: 18px;
             line-height: 28px;
         }
-        
-        img.banner{
+
+        img.banner {
             display: block;
             margin-left: auto;
             margin-right: auto;
             height: 456px;
             width: 684px;
         }
-        
-        button.codeCollapsible{
-            display:block;
+
+        button.codeCollapsible {
+            display: block;
             width: 780px;
             height: 55px;
             margin-left: auto;
@@ -515,12 +578,13 @@ section.project{
             text-indent: 50px;
         }
 
-        button.active, button.codeCollapsible:hover{
+        button.active,
+        button.codeCollapsible:hover {
             background-color: rgb(100, 99, 163);
             border: 2px solid rgb(35, 33, 61);
         }
 
-        button.codeCollapsible:after{
+        button.codeCollapsible:after {
             content: '\02795\FE0E';
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             color: white;
@@ -530,11 +594,11 @@ section.project{
             margin-top: 5px;
         }
 
-         button.codeCollapsible.active:after{
+        button.codeCollapsible.active:after {
             content: '\02796\FE0E';
         }
 
-        pre{
+        pre {
             margin-top: 0;
             margin-left: auto;
             margin-right: auto;
@@ -546,8 +610,8 @@ section.project{
             overflow: hidden;
             transition: max-height 0.36s cubic-bezier(0.8, 0.1, 0.2, 0.9);
         }
-        
-        img.content{
+
+        img.content {
             display: block;
             margin-top: 30px;
             margin-bottom: 30px;
@@ -557,7 +621,7 @@ section.project{
             height: auto;
         }
 
-        img.award{
+        img.award {
             display: block;
             margin-top: 15px;
             margin-bottom: 15px;
@@ -567,7 +631,7 @@ section.project{
             height: 110px;
         }
 
-        video.content{
+        video.content {
             display: block;
             margin-top: 30px;
             margin-bottom: 30px;
@@ -576,8 +640,8 @@ section.project{
             width: 560px;
             height: auto;
         }
-        
-        iframe{
+
+        iframe {
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -585,7 +649,7 @@ section.project{
             margin-bottom: 30px;
         }
 
-        div.projectOverview{
+        div.projectOverview {
             display: flex;
             flex-direction: row;
             align-items: flex-start;
@@ -594,108 +658,113 @@ section.project{
             margin-right: auto;
             width: 650px;
 
-            h4{
+            h4 {
                 margin-top: 0;
-                width:auto;
+                width: auto;
             }
 
-            div.overviewList{
+            div.overviewList {
                 width: 300px;
                 margin-bottom: 0px;
                 margin-top: 0px;
 
-                li{
+                li {
                     text-align: start;
                     margin-bottom: 14px;
-                };
+                }
 
-                li.info{
-                    p{
+                ;
+
+                li.info {
+                    p {
                         margin-bottom: 12px;
                         margin-top: 12px;
                     }
                 }
 
-                li.content{
-                    a{
+                li.content {
+                    a {
                         margin-bottom: 12px;
                         margin-top: 12px;
                         font-size: 22px;
                     }
                 }
 
-                li.content:hover{
-                    color:#ff5773;
-                    a{
-                        color:#ff5773;
+                li.content:hover {
+                    color: #ff5773;
+
+                    a {
+                        color: #ff5773;
                     }
                 }
             }
         }
-        
+
     }
 }
 
-@media screen and (max-width: 1100px ) {
-    section.project{
+@media screen and (max-width: 1100px) {
+    section.project {
         width: 90vw;
         margin-left: auto;
         margin-right: auto;
 
-        div.dark{
-            width:inherit;
+        div.dark {
+            width: inherit;
         }
 
-        div.projectpage{
-            width:inherit;
+        div.projectpage {
+            width: inherit;
             margin: auto;
-            
-            img.banner{
+
+            img.banner {
                 width: 70vW;
                 height: 47vw;
             }
-            
-            img.content{
+
+            img.content {
                 width: 60vW;
                 height: auto;
             }
 
-            video.content{
+            video.content {
                 width: 60vW;
                 height: auto;
             }
-            
-            button.codeCollapsible{
+
+            button.codeCollapsible {
                 width: 80vw;
             }
 
-            pre{
+            pre {
                 width: 80vw;
             }
 
-            p{
+            p {
                 width: 70vW;
                 height: auto;
             }
-            
-            iframe{
+
+            iframe {
                 width: 60vW;
                 height: 35vw;
             }
         }
     }
 }
-@media screen and (max-width: 950px ) {
-    
-    section.project{
-        div.projectpage{
-        
-            div.projectOverview{
+
+@media screen and (max-width: 950px) {
+
+    section.project {
+        div.projectpage {
+
+            div.projectOverview {
 
                 flex-direction: column;
                 width: 70vw;
-                li.info{
-                    p{
+
+                li.info {
+                    p {
                         margin-left: 0;
                         margin-right: 0;
                     }
@@ -704,79 +773,82 @@ section.project{
         }
     }
 }
+
 @media screen and (max-width: 700px) {
-    section.project{
+    section.project {
         width: 100%;
 
-        div.projectpage{
-            
-            img.banner{
+        div.projectpage {
+
+            img.banner {
                 margin-top: 30px;
                 width: 100vW;
                 height: auto;
             }
-        
-            img.content{
+
+            img.content {
                 width: 100vW;
                 height: auto;
             }
 
-            video.content{
+            video.content {
                 width: 100vw;
                 height: auto;
             }
-    
-            p{
+
+            p {
                 width: 80vW;
                 font-size: 20px;
                 line-height: 28px;
             }
 
-            h2{
+            h2 {
                 width: 80vW;
             }
 
-            h3{
+            h3 {
                 width: 80vW;
             }
 
-            button.codeCollapsible{
+            button.codeCollapsible {
                 width: 95vw;
             }
 
-            pre{
+            pre {
                 width: 95vw;
             }
-    
-            iframe{
+
+            iframe {
                 width: 100vW;
                 height: 56.2vw;
             }
 
-            li{
+            li {
                 width: 80vW;
                 font-size: 20px;
                 line-height: 28px;
             }
 
-            div.projectOverview{
+            div.projectOverview {
 
                 width: 80vw;
             }
         }
     }
 }
-@media screen and (max-width: 500px){
 
-    section.project div.projectpage p{
+@media screen and (max-width: 500px) {
+
+    section.project div.projectpage p {
         font-size: 18px;
     }
-    section li{
+
+    section li {
         font-size: 18px;
     }
 }
 
-section.bio{
+section.bio {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -784,25 +856,25 @@ section.bio{
     padding-right: 60px;
     color: rgb(29, 29, 29);
 
-    h2{
+    h2 {
         color: rgb(0, 0, 0);
     }
-    
-    div.about{
+
+    div.about {
         display: flex;
         align-items: center;
         flex-direction: column;
         margin: auto;
-    
-        p{
+
+        p {
             margin-top: 10px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             line-height: 36px;
             width: 700px;
             font-size: 18px;
         }
-    
-        img{
+
+        img {
             height: 300px;
             width: 300px;
             border-radius: 100%;
@@ -812,63 +884,71 @@ section.bio{
 }
 
 
-@media screen and (max-width: 1100px ){
-    section.bio div.about img{
+@media screen and (max-width: 1100px) {
+    section.bio div.about img {
         width: 30vW;
         height: auto;
     }
-    section.bio div.about p{
+
+    section.bio div.about p {
         width: 70vW;
         height: auto;
     }
-    section.bio div.about iframe{
+
+    section.bio div.about iframe {
         width: 60vW;
         height: 35vw;
     }
 }
-@media screen and (max-width: 700px){
-    section.bio{
+
+@media screen and (max-width: 700px) {
+    section.bio {
         padding-left: 0px;
         padding-right: 0px;
     }
-    section.bio div.about{
+
+    section.bio div.about {
         margin: 10vw;
     }
-    section.bio div.about p{
+
+    section.bio div.about p {
         width: 80vW;
         font-size: 20px;
         line-height: 26px;
     }
-    section.bio div.about img{
+
+    section.bio div.about img {
         width: 40vW;
     }
-    section.bio div.about iframe{
+
+    section.bio div.about iframe {
         width: 70vW;
         height: 40vw;
     }
 }
-@media screen and (max-width: 500px){
-    section.bio div.about p{
+
+@media screen and (max-width: 500px) {
+    section.bio div.about p {
         font-size: 18px;
     }
 }
 
-footer{
+footer {
     background: rgb(24, 23, 23);
     color: white;
     padding: 15px;
 
-    h2{
+    h2 {
         color: white;
         font-size: 34px;
         margin-top: 20px;
     }
 
-    a{
+    a {
         color: white;
     }
 
-    div.contact{
+    div.contact {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -877,29 +957,26 @@ footer{
 
         border-bottom: 2px solid rgb(43, 43, 43);
 
-        div.contact-widget{
-            display:flex;
+        div.contact-widget {
+            display: flex;
             flex-direction: column;
             align-items: center;
 
-            img{
+            img {
                 width: 60px;
                 height: auto;
             }
         }
     }
 
-    p.copy
-    {
-        color:rgb(102, 102, 102) 
+    p.copy {
+        color: rgb(102, 102, 102)
     }
-    
-    @media screen and (min-width: 700px ){
-        div.contact{
+
+    @media screen and (min-width: 700px) {
+        div.contact {
             width: 600px;
             margin-left: 40px;
         }
     }
 }
-
-
