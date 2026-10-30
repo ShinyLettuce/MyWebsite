@@ -561,6 +561,14 @@ section.project {
             width: 684px;
         }
 
+        img.bannerWide {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 384,75px;
+            width: 684px;
+        }
+
         button.codeCollapsible {
             display: block;
             width: 780px;
@@ -722,6 +730,11 @@ section.project {
                 height: 47vw;
             }
 
+            img.bannerWide {
+                width: 70vW;
+                height: 39vw;
+            }
+
             img.content {
                 width: 60vW;
                 height: auto;
@@ -782,6 +795,11 @@ section.project {
 
             img.banner {
                 margin-top: 30px;
+                width: 100vW;
+                height: auto;
+            }
+
+            img.bannerWide {
                 width: 100vW;
                 height: auto;
             }
